@@ -11,8 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 
     if (!empty($nom) && !empty($email) && !empty($sujet) && !empty($message)) {
-        // Dans un environnement de production, vous enverriez un email ici
-        // Pour l'instant, nous simulons juste le succès
+    
         $success = true;
     } else {
         $error = "Veuillez remplir tous les champs du formulaire.";
